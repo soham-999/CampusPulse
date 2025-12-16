@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusPulse | Home</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+    <div id="videoBackground">
+        <div id="overlayGradient"></div>
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop" id="heroImagePlaceholder" alt="Event Background">
+    </div>
+
+    <nav id="mainNav">
+        <div id="brandLogo" onclick="window.location.href='index.html'">CAMPUS<span class="highlight">PULSE</span></div>
+        <div id="navLinks">
+            <a href="index.html" class="navLink active">Home</a>
+            <a href="events.html" class="navLink">Events</a>
+            <a href="#" class="navLink">My Calendar</a>
+            <a href="about.html" class="navLink">About Us</a>
+        </div>
+        <button id="loginButton">Student Login</button>
+    </nav>
+
+    <header id="heroSection">
+        <div id="heroContent" class="reveal">
+            <p id="heroSubtitle">The Campus is Alive</p>
+            <h1 id="heroTitle">UNLEASH YOUR<br>POTENTIAL</h1>
+            <p id="heroDescription">
+                Your gateway to every hackathon, cultural fest, and sports league. 
+                Don't just attend college. Experience it.
+            </p>
+            <a href="events.html" id="ctaButton">Explore Schedule <span class="arrow">→</span></a>
+        </div>
+    </header>
+
+    <section id="flashEvents" class="reveal">
+        <div id="flashContainer">
+            <div id="flashBadge">
+                <i class="fas fa-fire" id="fireEmoji"></i> LIVE NOW
+            </div>
+            <div id="flashInfo">
+                <span id="flashTitle">Loading Live Event...</span>
+                <span id="flashTimer">--:--:--</span>
+            </div>
+            <button id="joinNowButton" onclick="window.location.href='events.html'">Join Rush</button>
+        </div>
+    </section>
+
+    <section id="eventsGridWrapper" class="reveal" style="padding: 60px 10%;">
+        <h2 class="sectionTitle" style="color: white; margin-bottom: 30px;">Featured Vibe Checks</h2>
+        
+        <div id="featuredGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <p style="color: gray;">Loading featured events...</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <button class="viewMoreBtn" onclick="window.location.href='events.html'">
+                View All Events <span class="arrow">→</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="fomoSection" class="reveal">
+        <h2 class="sectionTitle">Memory Lane</h2>
+        <div id="fomoContainer">
+            <div id="fomoSlider">
+                <div class="fomoSlide activeSlide" style="background-image: url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e');">
+                    <div class="slideContent">
+                        <h3>Tech Fest 2024</h3>
+                        <p>"The biggest turnout in history."</p>
+                    </div>
+                </div>
+                <div class="fomoSlide" style="background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94');">
+                    <div class="slideContent">
+                        <h3>Cultural Night 2023</h3>
+                        <p>"Where it all started."</p>
+                    </div>
+                </div>
+            </div>
+            <button id="prevSlide" class="sliderBtn">❮</button>
+            <button id="nextSlide" class="sliderBtn">❯</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">CAMPUS<span class="highlight">PULSE</span></div>
+                <p>The heartbeat of student life. Don't miss a moment of the action.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="events.html">Events Schedule</a>
+                <a href="#">My Calendar</a>
+                <a href="about.html">About Our Team</a>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>support@campuspulse.edu</p>
+                <p>+91 98765 43210</p>
+                <p>Student Center, Building 4</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 CampusPulse. Built for the Students.
+        </div>
+    </footer>
+
+    <script src="src/main.js"></script>
+</body>
+</html>

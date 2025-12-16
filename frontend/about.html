@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusPulse | The Architects</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+
+    <div id="videoBackground">
+        <div id="overlayGradient"></div>
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" id="heroImagePlaceholder" alt="Space Background">
+    </div>
+
+    <nav id="mainNav">
+        <div id="brandLogo" onclick="window.location.href='index.html'">CAMPUS<span class="highlight">PULSE</span></div>
+        <div id="navLinks">
+            <a href="index.html" class="navLink">Home</a>
+            <a href="events.html" class="navLink">Events</a>
+            <a href="#" class="navLink">My Calendar</a>
+            <a href="about.html" class="navLink active">About Us</a>
+        </div>
+        <button id="loginButton">Student Login</button>
+    </nav>
+
+    <div class="pageContainer">
+        
+        <div class="aboutHeader reveal">
+            <h1 class="pageTitle" style="font-size: 4rem; text-transform: uppercase; letter-spacing: 2px;">The Architects</h1>
+            <p class="pageSubtitle" style="color: var(--accentGold); font-weight: 600;">We don't wait for the hype. We build it.</p>
+        </div>
+
+        <section id="teamGrid">
+            
+            <div class="teamCard reveal">
+                <div class="memberImage" style="background-image: url('https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1887');"></div>
+                <div class="memberInfo">
+                    <h3>Alex Carter</h3>
+                    <p class="role">Code Architect</p>
+                    <p style="color:#a0a0a0; font-size:0.9rem; padding:0 20px 20px;">"If it doesn't scale, it doesn't exist."</p>
+                    <div class="socialLinks">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teamCard reveal">
+                <div class="memberImage" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887');"></div>
+                <div class="memberInfo">
+                    <h3>Sarah Jenkins</h3>
+                    <p class="role">Visual Lead</p>
+                     <p style="color:#a0a0a0; font-size:0.9rem; padding:0 20px 20px;">"Making pixels look expensive."</p>
+                    <div class="socialLinks">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teamCard reveal">
+                <div class="memberImage" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887');"></div>
+                <div class="memberInfo">
+                    <h3>Marcus Reid</h3>
+                    <p class="role">Operations</p>
+                     <p style="color:#a0a0a0; font-size:0.9rem; padding:0 20px 20px;">"I make chaos look organized."</p>
+                    <div class="socialLinks">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teamCard reveal">
+                <div class="memberImage" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964');"></div>
+                <div class="memberInfo">
+                    <h3>Priya Sharma</h3>
+                    <p class="role">Network</p>
+                     <p style="color:#a0a0a0; font-size:0.9rem; padding:0 20px 20px;">"Your network is your net worth."</p>
+                    <div class="socialLinks">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">CAMPUS<span class="highlight">PULSE</span></div>
+                <p>The heartbeat of student life.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="events.html">Events Schedule</a>
+                <a href="#">My Calendar</a>
+                <a href="about.html">The Architects</a>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>team@campuspulse.edu</p>
+                <p>Building 4, HQ</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Follow</h4>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 CampusPulse. Built Different.
+        </div>
+    </footer>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
