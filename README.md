@@ -91,7 +91,7 @@ CampusPulse/
 1. **Clone the repository**
    ```bash
    git clone https://github.com/soham-999/CampusPulse.git
-   cd CampusPulse/CampusPulse
+   cd CampusPulse
    ```
 
 2. **Install dependencies**
