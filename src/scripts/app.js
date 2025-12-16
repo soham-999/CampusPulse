@@ -23,7 +23,7 @@ function escapeHtml(unsafe) {
 
 async function fetchEvents() {
     try {
-        const response = await fetch('/data/events.json');
+        const response = await fetch('/public/data/events.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -36,7 +36,7 @@ async function fetchEvents() {
 
 async function fetchMemoryLane() {
     try {
-        const response = await fetch('/data/memory-lane.json');
+        const response = await fetch('/public/data/memory-lane.json');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         return await response.json();
     } catch (error) {
