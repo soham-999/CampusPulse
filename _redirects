@@ -1,13 +1,5 @@
-# Redirects for CampusPulse
-
-# Ensure HTML pages are served correctly
+# Clean URL redirects for CampusPulse static site
 /about    /about.html    200
 /events   /events.html   200
 /vision   /vision.html   200
 /faq      /faq.html      200
-
-# Keep exact file paths working
-/about.html   /about.html   200
-/events.html  /events.html  200
-/vision.html  /vision.html  200
-/faq.html     /faq.html     200
