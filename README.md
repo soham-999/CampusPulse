@@ -155,7 +155,7 @@ Created the original concept, vision, and UI/UX design
 [LinkedIn](https://www.linkedin.com/in/animesh-adhikari-803755379/) | [GitHub](https://github.com/animeshadk10-ops)
 
 **Soham Chakraborty** - Lead Developer  
-Production build, SEO (100/100), security, advanced features, deployment  
+Production build, SEO, security, advanced features, deployment  
 [LinkedIn](https://www.linkedin.com/in/soham-chakraborty-b15837373/) | [GitHub](https://github.com/soham-999)
 
 
