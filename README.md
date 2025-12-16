@@ -159,28 +159,6 @@ Current email: **eclipsekolkata@outlook.com**
 
 ---
 
-## SEO & Analytics
-
-### **Google Search Console Setup**
-
-1. Verify ownership at [search.google.com/search-console](https://search.google.com/search-console)
-2. Submit sitemap: `https://iemcampuspulse.netlify.app/sitemap.xml`
-3. Request indexing for all 5 pages
-
----
-
-## Deployment
-
-### **Netlify Deployment**
-
-1. Push to GitHub
-2. Connect to [app.netlify.com](https://app.netlify.com)
-3. Configure:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-4. Deploy!
-
----
 
 ## Team
 
