@@ -26,7 +26,7 @@ CampusPulse is a **production-ready**, **SEO-optimized** web platform built by I
 ### **Build & Deployment**
 - **Build Tool**: Vite v7.3.0
 - **Package Manager**: npm
-- **Hosting**: Netlify (auto-deploy from GitHub)
+- **Hosting**: Netlify
 - **CDN**: Netlify Edge Network
 
 ### **External Resources**
@@ -139,20 +139,6 @@ Edit `public/data/events.json`:
 
 ---
 
-## Customization
-
-### **Brand Colors**
-
-Edit CSS variables in `src/styles/main.css`:
-
-```css
-:root {
-    --primaryDark: #0a0e17;
-    --accentGold: #ffb703;
-    --accentOrange: #fb8500;
-}
-```
-
 ### **Contact Information**
 
 Current email: **eclipsekolkata@outlook.com**
@@ -191,7 +177,6 @@ For permissions: **eclipsekolkata@outlook.com**
 **Eclipse Team**  
 📧 **eclipsekolkata@outlook.com**  
 🌐 [https://iemcampuspulse.netlify.app](https://iemcampuspulse.netlify.app)  
-🏫 Institute of Engineering & Management, Kolkata
 
 ---
 
