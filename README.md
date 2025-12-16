@@ -21,7 +21,7 @@ CampusPulse is a **production-ready**, **SEO-optimized** web platform built by I
 ### **Frontend**
 - **HTML5**: Semantic markup with structured data
 - **CSS3**: Custom properties, glassmorphism, animations
-- **JavaScript**: ES6+ vanilla JS (425 lines, XSS-safe)
+- **JavaScript**: ES6+ vanilla JS
 
 ### **Build & Deployment**
 - **Build Tool**: Vite v7.3.0
@@ -30,9 +30,9 @@ CampusPulse is a **production-ready**, **SEO-optimized** web platform built by I
 - **CDN**: Netlify Edge Network
 
 ### **External Resources**
-- **Fonts**: Google Fonts (Inter family)
+- **Fonts**: Google Fonts
 - **Icons**: Font Awesome 6.4.0
-- **Images**: Local assets (optimized)
+- **Images**: Local assets
 
 ### **Performance Metrics**
 ```
