@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "title": "AI Hackathon 2025",
+        "date": "2025-12-20T10:00:00",
+        "category": "tech",
+        "type": "Hackathon",
+        "organizer": "AI & Robotics Club",
+        "description": "24-hour hackathon to build the next generation of AI agents.",
+        "image": "/assets/images/demoevent.jpeg",
+        "link": "https://hackathon.campuspulse.edu",
+        "isPopular": true
+    },
+    {
+        "id": 2,
+        "title": "Neon Music Night",
+        "date": "2025-12-22T18:00:00",
+        "category": "cultural",
+        "type": "Concert",
+        "organizer": "Student Council",
+        "description": "An electrifying night of music, lights, and dance.",
+        "image": "/assets/images/demoevent.jpeg",
+        "link": "https://tickets.campuspulse.edu",
+        "isPopular": true
+    },
+    {
+        "id": 3,
+        "title": "Inter-Year Football",
+        "date": "2025-12-24T15:00:00",
+        "category": "sports",
+        "type": "Tournament",
+        "organizer": "Sports Board",
+        "description": "The final showdown between Year 3 and Year 4.",
+        "image": "/assets/images/demoevent.jpeg",
+        "link": "https://sports.campuspulse.edu",
+        "isPopular": false
+    },
+    {
+        "id": 4,
+        "title": "Robotics Workshop",
+        "date": "2025-12-28T11:00:00",
+        "category": "tech",
+        "type": "Workshop",
+        "organizer": "Mech Society",
+        "description": "Hands-on session on building autonomous drones.",
+        "image": "/assets/images/demoevent.jpeg",
+        "link": "https://workshops.campuspulse.edu",
+        "isPopular": false
+    },
+    {
+        "id": 5,
+        "title": "Debate Championship",
+        "date": "2026-01-05T09:00:00",
+        "category": "cultural",
+        "type": "Competition",
+        "organizer": "Literary Society",
+        "description": "Speak your mind. Win the trophy.",
+        "image": "/assets/images/demoevent.jpeg",
+        "link": "https://debate.campuspulse.edu",
+        "isPopular": false
+    },
+    {
+        "id": 6,
+        "title": "Esports Tournament",
+        "date": "2026-01-10T20:00:00",
+        "category": "tech",
+        "type": "Tournament",
+        "organizer": "Gaming Guild",
+        "description": "Valorant and CS:GO championship.",
+        "image": "/assets/images/demoevent.jpeg",
+        "link": "https://gaming.campuspulse.edu",
+        "isPopular": true
+    },
+    {
+        "id": 7,
+        "title": "Past Coding Contest",
+        "date": "2024-11-15T10:00:00",
+        "category": "tech",
+        "type": "Contest",
+        "organizer": "CodeChef Chapter",
+        "description": "Competitive programming contest on Dynamic Programming.",
+        "image": "/assets/images/demoevent.jpeg",
+        "link": "https://contest.campuspulse.edu",
+        "isPopular": true
+    }
+]

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+
+Sitemap: https://iemcampuspulse.netlify.app/sitemap.xml

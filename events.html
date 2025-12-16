@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e17">
+    <meta name="description"
+        content="Browse all upcoming events at IEM Kolkata 2025. Filter by tech, cultural, or sports events. Find hackathons, workshops, fests & tournaments. Real-time event calendar for IEM students.">
+    <meta name="keywords"
+        content="IEM Kolkata event calendar, IEM events 2025, IEM hackathon schedule, IEM cultural events, IEM sports tournaments, college events calendar Kolkata, upcoming IEM events, IEM tech fest dates">
+    <meta name="author" content="Eclipse Team - IEM Kolkata">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://iemcampuspulse.netlify.app/events.html">
+    <title>All Events at IEM Kolkata 2025 | Event Calendar & Schedule - CampusPulse</title>
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iemcampuspulse.netlify.app/events.html">
+    <meta property="og:title" content="Browse All Events - CampusPulse">
+    <meta property="og:description"
+        content="Filter and discover campus events by category, date, and popularity. Tech workshops, cultural nights, sports tournaments and more.">
+    <meta property="og:image" content="https://iemcampuspulse.netlify.app/assets/images/card.svg">
+    <meta property="og:image:alt" content="CampusPulse Logo">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Browse All Events - CampusPulse">
+    <meta name="twitter:description" content="Filter and discover campus events by category, date, and popularity.">
+    <meta name="twitter:image" content="https://iemcampuspulse.netlify.app/assets/images/card.svg">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+
+<body>
+
+    <div id="pageBackground"></div>
+
+    <nav id="mainNav">
+        <div id="brandLogo" onclick="window.location.href='index.html'">
+            <img src="/favicon.svg" alt="CampusPulse Icon"
+                style="height: 28px; width: 28px; margin-right: 8px; vertical-align: middle;">
+            CAMPUS<span class="highlight">PULSE</span>
+        </div>
+        <div id="navLinks">
+            <a href="index.html" class="navLink">Home</a>
+            <a href="events.html" class="navLink active">Events</a>
+            <a href="vision.html" class="navLink">Vision</a>
+            <a href="faq.html" class="navLink">FAQ</a>
+            <a href="about.html" class="navLink">About Us</a>
+        </div>
+    </nav>
+    <div class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="sideOverlay"></div>
+    <div id="sidePanel">
+        <a href="index.html" class="sideLink">Home</a>
+        <a href="events.html" class="sideLink active">Events</a>
+        <a href="vision.html" class="sideLink">Vision</a>
+        <a href="faq.html" class="sideLink">FAQ</a>
+        <a href="about.html" class="sideLink">About Us</a>
+    </div>
+
+    <div class="pageContainer">
+
+        <div class="searchHeader reveal">
+            <h1 class="pageTitle">Find Your Next Adventure</h1>
+            <p class="pageSubtitle">Explore everything happening on campus, from tech talks to concerts.</p>
+
+            <div class="searchControls">
+                <div class="searchWrapper">
+                    <i class="fas fa-search searchIcon"></i>
+                    <input type="text" id="eventSearch" placeholder="Search events...">
+                </div>
+                <button id="openFiltersBtn" class="filterBtn primaryConfig"><i class="fas fa-sliders-h"></i>
+                    Filters</button>
+            </div>
+        </div>
+
+        <!-- Split Layout: Sidebar + Grid -->
+        <div class="eventsSplitView">
+
+            <!-- Sidebar (Desktop: Persistent, Mobile: Drawer) -->
+            <aside id="filterSidebar" class="hidden-mobile">
+                <div class="sidebarHeader mobile-only">
+                    <h3>Filters</h3>
+                    <button id="closeSidebarBtn"><i class="fas fa-times"></i></button>
+                </div>
+
+                <div class="filterGroup">
+                    <label>Category</label>
+                    <div class="cat-options">
+                        <button class="catBtn active" data-filter="all">All</button>
+                        <button class="catBtn" data-filter="tech">Tech</button>
+                        <button class="catBtn" data-filter="cultural">Cultural</button>
+                        <button class="catBtn" data-filter="sports">Sports</button>
+                    </div>
+                </div>
+
+                <div class="filterGroup">
+                    <label>Date Range</label>
+                    <div class="date-col">
+                        <input type="date" id="startDate" class="dateInput" placeholder="Start">
+                        <input type="date" id="endDate" class="dateInput" placeholder="End">
+                    </div>
+                </div>
+
+                <div class="filterGroup">
+                    <label>Sort By</label>
+                    <select id="sortSelect" class="sidebarSelect">
+                        <option value="upcoming">Upcoming First</option>
+                        <option value="newest">Newest Added</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+
+                <div class="sidebarFooter">
+                    <button id="clearAllFilters" class="clearBtn">Clear Filters</button>
+                    <button id="applyFiltersBtn" class="applyBtn mobile-only">Show Results</button>
+                </div>
+            </aside>
+
+            <!-- Overlay for Mobile Drawer -->
+            <div id="filterOverlay" class="hidden"></div>
+
+            <!-- Main Grid -->
+            <section id="fullEventsGrid">
+                <p style="color: gray; text-align: center; grid-column: 1/-1;">Loading full event schedule...</p>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">CAMPUS<span class="highlight">PULSE</span></div>
+                <p>The heartbeat of student life at IEM Kolkata. Don't miss a moment of the action.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="events.html">Events Schedule</a>
+                <a href="vision.html">Our Vision</a>
+                <a href="faq.html">FAQ</a>
+                <a href="about.html">Meet the Creators</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>eclipsekolkata@outlook.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 CampusPulse. | Eclipse Team
+        </div>
+    </footer>
+
+    <script src="src/scripts/app.js"></script>
+</body>
+
+</html>
