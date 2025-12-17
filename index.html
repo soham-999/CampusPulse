@@ -110,6 +110,40 @@
             alt="IEM Kolkata campus events and student activities" width="1920" height="1080" loading="eager">
     </div>
 
+    <!-- DIAGNOSTIC TOOL (REMOVE AFTER FIXING) -->
+    <div
+        style="position: fixed; top: 100px; right: 20px; z-index: 9999; background: rgba(0,0,0,0.8); padding: 20px; border: 1px solid red; border-radius: 8px; max-width: 300px;">
+        <h4 style="color: white; margin-bottom: 10px;">Deployment Debugger</h4>
+        <button onclick="runDiagnostics()"
+            style="background: red; color: white; border: none; padding: 5px 10px; cursor: pointer;">Test Files</button>
+        <div id="debugOutput" style="color: #ccc; font-size: 12px; margin-top: 10px; font-family: monospace;"></div>
+    </div>
+    <script>
+        async function runDiagnostics() {
+            const out = document.getElementById('debugOutput');
+            out.innerHTML = "Checking files...";
+
+            const files = [
+                './events.html',
+                './public/data/events.json',
+                './src/scripts/app.js'
+            ];
+
+            let log = "";
+
+            for (const f of files) {
+                try {
+                    const res = await fetch(f);
+                    log += `${f}: ${res.status} ${res.statusText}<br>`;
+                } catch (e) {
+                    log += `${f}: FAILED (${e.message})<br>`;
+                }
+            }
+            out.innerHTML = log;
+        }
+    </script>
+    <!-- END DIAGNOSTICS -->
+
     <nav id="mainNav">
         <div id="brandLogo" onclick="window.location.href='index.html'">
             <img src="public/favicon.svg" alt="CampusPulse Icon"

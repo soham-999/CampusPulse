@@ -1,3 +1,4 @@
 [build]
+  base = "."
   publish = "."
-
+  command = "echo 'Static Site - No Build'"
