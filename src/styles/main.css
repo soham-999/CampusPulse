@@ -44,8 +44,8 @@ body {
 
 /* SCROLL REVEAL ANIMATIONS */
 .reveal {
-    opacity: 0;
-    transform: translateY(50px);
+    /* opacity: 0; Removed for Progressive Enhancement */
+    /* transform: translateY(50px); Removed for Progressive Enhancement */
     transition: all 0.8s ease-out;
 }
 
