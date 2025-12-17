@@ -23,6 +23,7 @@ function escapeHtml(unsafe) {
 
 async function fetchEvents() {
     try {
+        // Try relative path first (Best for static sites)
         const response = await fetch('public/data/events.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -30,7 +31,15 @@ async function fetchEvents() {
         return await response.json();
     } catch (error) {
         console.error("Could not fetch events:", error);
-        return []; // Return empty array on error to prevent crash
+        // UI FEEDBACK: Find containers and show error
+        const containers = [document.getElementById('featuredGrid'), document.getElementById('fullEventsGrid')];
+        containers.forEach(c => {
+            if (c) c.innerHTML = `<p style="color: #ff4d4d; text-align: center; grid-column: 1/-1;">
+                Error loading events. Please check console.<br>
+                (${escapeHtml(error.message)})
+            </p>`;
+        });
+        return [];
     }
 }
 
@@ -41,6 +50,7 @@ async function fetchMemoryLane() {
         return await response.json();
     } catch (error) {
         console.error("Could not fetch memory lane:", error);
+        // Optional: Error feedback for slider
         return [];
     }
 }

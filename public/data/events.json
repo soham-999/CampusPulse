@@ -7,7 +7,7 @@
         "type": "Hackathon",
         "organizer": "AI & Robotics Club",
         "description": "24-hour hackathon to build the next generation of AI agents.",
-        "image": "/assets/images/demoevent.jpeg",
+        "image": "public/assets/images/demoevent.jpeg",
         "link": "https://hackathon.campuspulse.edu",
         "isPopular": true
     },
@@ -19,7 +19,7 @@
         "type": "Concert",
         "organizer": "Student Council",
         "description": "An electrifying night of music, lights, and dance.",
-        "image": "/assets/images/demoevent.jpeg",
+        "image": "public/assets/images/demoevent.jpeg",
         "link": "https://tickets.campuspulse.edu",
         "isPopular": true
     },
@@ -31,7 +31,7 @@
         "type": "Tournament",
         "organizer": "Sports Board",
         "description": "The final showdown between Year 3 and Year 4.",
-        "image": "/assets/images/demoevent.jpeg",
+        "image": "public/assets/images/demoevent.jpeg",
         "link": "https://sports.campuspulse.edu",
         "isPopular": false
     },
@@ -43,7 +43,7 @@
         "type": "Workshop",
         "organizer": "Mech Society",
         "description": "Hands-on session on building autonomous drones.",
-        "image": "/assets/images/demoevent.jpeg",
+        "image": "public/assets/images/demoevent.jpeg",
         "link": "https://workshops.campuspulse.edu",
         "isPopular": false
     },
@@ -55,7 +55,7 @@
         "type": "Competition",
         "organizer": "Literary Society",
         "description": "Speak your mind. Win the trophy.",
-        "image": "/assets/images/demoevent.jpeg",
+        "image": "public/assets/images/demoevent.jpeg",
         "link": "https://debate.campuspulse.edu",
         "isPopular": false
     },
@@ -67,7 +67,7 @@
         "type": "Tournament",
         "organizer": "Gaming Guild",
         "description": "Valorant and CS:GO championship.",
-        "image": "/assets/images/demoevent.jpeg",
+        "image": "public/assets/images/demoevent.jpeg",
         "link": "https://gaming.campuspulse.edu",
         "isPopular": true
     },
@@ -79,7 +79,7 @@
         "type": "Contest",
         "organizer": "CodeChef Chapter",
         "description": "Competitive programming contest on Dynamic Programming.",
-        "image": "/assets/images/demoevent.jpeg",
+        "image": "public/assets/images/demoevent.jpeg",
         "link": "https://contest.campuspulse.edu",
         "isPopular": true
     }
