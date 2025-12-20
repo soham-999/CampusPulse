@@ -173,7 +173,7 @@
     <section id="fomoSection" class="reveal">
         <h2 class="sectionTitle">Memory Lane</h2>
         <div id="fomoContainer">
-            <div id="fomoSlider">
+            <div id="fomoSlider" style="display: flex; overflow-x: auto; gap: 20px;">
                 <!-- Slides will be injected here by app.js -->
             </div>
             <button id="prevSlide" class="sliderBtn">❮</button>
@@ -206,6 +206,13 @@
             &copy; 2025 CampusPulse. | Eclipse Team
         </div>
     </footer>
+    <div id="eventModalOverlay" class="modal-overlay">
+        <div class="modal-content" id="modalCard">
+            <button id="closeModalBtn" class="close-btn">&times;</button>
+            <div id="modalBody">
+            </div>
+        </div>
+    </div>
 
 
     <script type="module" src="./src/scripts/app.js"></script>

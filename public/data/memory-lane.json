@@ -1,20 +1,44 @@
 [
     {
         "id": 1,
-        "title": "Tech Fest 2024",
-        "description": "\"The biggest turnout in history.\"",
-        "image": "/assets/images/techfest2024.jpeg"
+        "title": "IEM GROUP",
+        "description": "The biggest turnout in history.",
+        "image": "./assets/images/iemimage1.png"
     },
     {
         "id": 2,
-        "title": "Cultural Night 2023",
-        "description": "\"Where it all started.\"",
-        "image": "/assets/images/culturalnight2023.jpeg"
+        "title": "MANAGEMENT PLAYGROUND",
+        "description": "",
+        "image": "./assets/images/iemimage2.png"
     },
     {
         "id": 3,
-        "title": "Inter-College Sports 2023",
-        "description": "\"Gold medal victory!\"",
-        "image": "/assets/images/intercollegesports2023.jpg"
+        "title": "IEM STUDENTS",
+        "description": "SEMINAR",
+        "image": "./assets/images/iemimage3.png"
+    },
+    {
+        "id": 4,
+        "title": "IEM-MBA GROUP",
+        "description": "",
+        "image": "./assets/images/iemimage4.png"
+    },
+    {
+        "id": 5,
+        "title": "IEM ASHRAM CAMPUS",
+        "description": "PLAYGROUND",
+        "image": "./assets/images/iemimage5.png"
+    },
+    {
+        "id": 6,
+        "title": "IEM GURUKUL CAMPUS",
+        "description": "PLAYGROUND",
+        "image": "./assets/images/iemimage6.png "
+    },
+    {
+        "id": 7,
+        "title": "GURUKUL CAMPUS",
+        "description": "PLAYGROUND",
+        "image": "./assets/images/iemimage7.png "
     }
 ]

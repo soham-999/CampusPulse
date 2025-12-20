@@ -914,6 +914,42 @@ body {
     border: 1px solid rgba(0, 255, 100, 0.3);
 }
 
+.musicTag {
+    background: rgba(255, 0, 100, 0.15);
+    color: #ff0064;
+    border: 1px solid rgba(255, 0, 100, 0.3);
+}
+
+.danceTag {
+    background: rgba(200, 0, 255, 0.15);
+    color: #c800ff;
+    border: 1px solid rgba(200, 0, 255, 0.3);
+}
+
+.dramaTag {
+    background: rgba(255, 200, 0, 0.15);
+    color: #ffc800;
+    border: 1px solid rgba(255, 200, 0, 0.3);
+}
+
+.gamesTag {
+    background: rgba(0, 255, 200, 0.15);
+    color: #00ffc8;
+    border: 1px solid rgba(0, 255, 200, 0.3);
+}
+
+.fusionTag {
+    background: rgba(255, 100, 100, 0.15);
+    color: #ff6464;
+    border: 1px solid rgba(255, 100, 100, 0.3);
+}
+
+.iempactTag {
+    background: rgba(100, 100, 255, 0.15);
+    color: #6464ff;
+    border: 1px solid rgba(100, 100, 255, 0.3);
+}
+
 .cardHeader {
     display: flex;
     justify-content: space-between;
@@ -967,6 +1003,7 @@ body {
     margin-bottom: 20px;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -1074,12 +1111,13 @@ body {
 }
 
 
-/* FOMO SLIDER (Home Page) */
+/* =========================================
+   MEMORY LANE - VIDEO STYLE (IMG TAG FIX)
+   ========================================= */
 
 #fomoSection {
-    /* background: var(--primaryDark);  REMOVED to let hero background show through */
     background: transparent;
-    padding: 80px 10%;
+    padding: 60px 10%;
     border-top: 1px solid var(--glassBorder);
 }
 
@@ -1087,88 +1125,105 @@ body {
     position: relative;
     width: 100%;
     height: 500px;
+    /* Fixed height is MANDATORY */
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid var(--glassBorder);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    background: #000;
+    /* Black background if loading */
 }
 
+/* The Track - Forces Horizontal Row */
 #fomoSlider {
+    display: flex;
+    /* Puts items in a row */
+    flex-direction: row;
+    overflow-x: auto;
+    /* Allows scrolling */
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    width: 100%;
+    height: 100%;
+
+    /* Hide Scrollbars */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#fomoSlider::-webkit-scrollbar {
+    display: none;
+}
+
+/* The Slide Wrapper */
+.fomo-slide {
+    min-width: 100%;
+    /* Force it to be full width */
     width: 100%;
     height: 100%;
     position: relative;
+    scroll-snap-align: start;
+    margin: 0;
+    padding: 0;
 }
 
-.fomoSlide {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* The Image Itself - Crucial for visibility */
+.fomo-slide img {
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    display: flex;
-    align-items: flex-end;
+    object-fit: cover;
+    /* Ensures it fills the box without stretching */
+    display: block;
 }
 
-.fomoSlide::after {
-    content: '';
+/* Text Content Overlay */
+.fomo-content {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50%;
+    padding: 40px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-}
-
-.activeSlide {
-    opacity: 1;
-    z-index: 1;
-}
-
-.slideContent {
-    position: relative;
     z-index: 2;
-    padding: 50px;
-    max-width: 600px;
 }
 
-.slideContent h3 {
+.fomo-content h3 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
     color: var(--accentGold);
+    margin-bottom: 10px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 }
 
-.slideContent p {
+.fomo-content p {
     font-size: 1.2rem;
+    color: #e0e0e0;
     font-style: italic;
-    color: var(--textWhite);
 }
 
+/* Buttons */
 .sliderBtn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     z-index: 10;
-    transition: all 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s;
 }
 
 .sliderBtn:hover {
     background: var(--accentOrange);
-    border-color: var(--accentOrange);
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -1178,6 +1233,17 @@ body {
 
 #nextSlide {
     right: 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #fomoContainer {
+        height: 300px;
+    }
+
+    .fomo-content h3 {
+        font-size: 1.5rem;
+    }
 }
 
 
@@ -1262,6 +1328,7 @@ footer {
     color: var(--textGray);
     font-size: 0.85rem;
 }
+
 
 
 /* MOBILE RESPONSIVENESS */
@@ -1551,6 +1618,7 @@ body.no-scroll {
     padding: 10px 20px;
     opacity: 0.8;
 }
+
 /* ================================
    VISION & MISSION PAGE STYLES
    ================================ */
@@ -1911,9 +1979,12 @@ body.no-scroll {
 }
 
 @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(0deg);
     }
+
     50% {
         transform: translateY(-20px) rotate(5deg);
     }
@@ -2078,15 +2149,15 @@ body.no-scroll {
         gap: 40px;
         text-align: center;
     }
-    
+
     .visionHeroContent {
         padding-right: 0;
     }
-    
+
     .visionMainTitle {
         font-size: 2.5rem;
     }
-    
+
     .visionIconLarge {
         width: 200px;
         height: 200px;
@@ -2095,9 +2166,12 @@ body.no-scroll {
 }
 
 .socialLinks a {
-    text-decoration: none; /* Removes the ugly underscores */
-    display: inline-flex;  /* Helps with alignment */
-    align-items: center;   /* Centers the icon vertically */
+    text-decoration: none;
+    /* Removes the ugly underscores */
+    display: inline-flex;
+    /* Helps with alignment */
+    align-items: center;
+    /* Centers the icon vertically */
 }
 
 
@@ -2106,17 +2180,21 @@ body.no-scroll {
 #teamGrid {
     display: flex !important;
     justify-content: center !important;
-    max-width: 100% !important;  /* CHANGED: 950px was too small, use full width */
+    max-width: 100% !important;
+    /* CHANGED: 950px was too small, use full width */
     margin: 0 auto !important;
-    flex-wrap: nowrap !important; /* CHANGED: Forces them to stay on one line */
-    gap: 20px !important;        /* CHANGED: Reduced gap to make them fit better */
+    flex-wrap: nowrap !important;
+    /* CHANGED: Forces them to stay on one line */
+    gap: 20px !important;
+    /* CHANGED: Reduced gap to make them fit better */
 }
 
 .teamCard {
     max-width: 350px !important;
     /* CHANGED: '1 1 0px' allows them to shrink equally to fit the screen */
-    flex: 1 1 0px !important; 
-    min-width: 200px !important; /* Ensures they don't get impossibly thin */
+    flex: 1 1 0px !important;
+    min-width: 200px !important;
+    /* Ensures they don't get impossibly thin */
 }
 
 /* TABLET VIEW: If screen is smaller than 1200px, wrap to 2 lines (optional) */
@@ -2124,8 +2202,10 @@ body.no-scroll {
     #teamGrid {
         flex-wrap: wrap !important;
     }
+
     .teamCard {
-        flex: 1 1 40% !important; /* 2 cards per row */
+        flex: 1 1 40% !important;
+        /* 2 cards per row */
     }
 }
 
@@ -2135,44 +2215,289 @@ body.no-scroll {
         flex-direction: column !important;
         align-items: center !important;
     }
+
     .teamCard {
         max-width: 100% !important;
         width: 100% !important;
     }
 }
+
 /* 1. The Main Heading Style */
 .team-title {
     text-align: center;
-    font-size: 3rem;       /* Make it Big */
-    font-weight: 800;      /* Make it Bold */
-    color: #ffffff;        /* White text for the normal words */
+    font-size: 3rem;
+    /* Make it Big */
+    font-weight: 800;
+    /* Make it Bold */
+    color: #ffffff;
+    /* White text for the normal words */
     text-transform: uppercase;
-    letter-spacing: 3px;   /* Wide spacing looks expensive */
-    margin-bottom: 50px;   /* Push the cards down */
-    font-family: 'Poppins', sans-serif; /* Or your chosen font */
+    letter-spacing: 3px;
+    /* Wide spacing looks expensive */
+    margin-bottom: 50px;
+    /* Push the cards down */
+    font-family: 'Poppins', sans-serif;
+    /* Or your chosen font */
 }
 
 /* 2. The "ECLIPSE" Special Effect */
 .eclipse-name {
     /* The Magic: A burning orange/gold gradient */
     background: linear-gradient(135deg, #ff8c00, #ff2d55);
-    -webkit-background-clip: text; /* Clips the background to the text shape */
-    -webkit-text-fill-color: transparent; /* Makes the text see-through so gradient shows */
-    
+    -webkit-background-clip: text;
+    /* Clips the background to the text shape */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* Makes the text see-through so gradient shows */
+
     /* The Glow: Adds a "halo" around the text */
     filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.6));
-    
+
     position: relative;
     display: inline-block;
 }
 
 /* Optional: A subtle animation to make it "breathe" */
 @keyframes eclipsePulse {
-    0% { filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.6)); }
-    50% { filter: drop-shadow(0 0 25px rgba(255, 60, 0, 0.9)); }
-    100% { filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.6)); }
+    0% {
+        filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.6));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 25px rgba(255, 60, 0, 0.9));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.6));
+    }
 }
 
 .eclipse-name {
     animation: eclipsePulse 3s infinite ease-in-out;
+}
+
+/* Modal Overlay - Dark Background */
+/* =========================================
+   PRO MODAL STYLES (NEW)
+   ========================================= */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    /* Darker backdrop */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(8px);
+    /* Stronger blur for focus */
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    background: #18181b;
+    /* Premium Dark Zinc */
+    width: 95%;
+    max-width: 750px;
+    max-height: 90vh;
+    border-radius: 24px;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.95) translateY(20px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Smooth Apple-like spring */
+
+    /* The Glow Effect Border */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+/* Close Button - Floating & Interactive */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 50;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: white;
+    color: black;
+    transform: rotate(90deg);
+    /* Nice spin effect */
+}
+
+/* Modal Internal Layout - Hero Image Blending */
+.modal-hero {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* The Gradient Fade Overlay */
+.modal-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 40%, #18181b 100%);
+}
+
+.modal-details {
+    padding: 0 40px 40px 40px;
+    color: #fff;
+    position: relative;
+    top: -60px;
+    /* Pulls content up over the faded image */
+}
+
+/* Typography & Badges */
+.modal-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px currentColor;
+    /* Neon Glow */
+}
+
+.modal-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modal-meta-row {
+    display: flex;
+    gap: 20px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.modal-meta-row i {
+    color: #fff;
+}
+
+/* The Description Box */
+.modal-desc-box {
+    background: #27272a;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    line-height: 1.7;
+    color: #e2e8f0;
+    white-space: pre-wrap;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+/* Past Memories Gallery */
+.memories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.memory-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.memory-img:hover {
+    transform: scale(1.05);
+}
+
+/* Scrollbar Polish */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #18181b;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+}
+
+/* Add this to style.css */
+.card-image-container {
+    background: #2d2d30;
+    /* Dark Grey Placeholder color */
+    background-image: linear-gradient(to top right, #2d2d30, #3f3f46);
+    min-height: 200px;
+}
+
+/* MEMORY LANE SLIDER FIX */
+#fomoSlider {
+    display: flex;
+    /* This aligns items horizontally */
+    flex-direction: row;
+    /* Forces them into a row */
+    overflow-x: auto;
+    /* Allows scrolling */
+    scroll-behavior: smooth;
+    /* Makes the arrow buttons scroll smoothly */
+    gap: 20px;
+    /* Adds space between cards */
+    padding-bottom: 10px;
+    /* Space for scrollbar (if visible) */
+
+    /* Hide scrollbar for a cleaner look */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE */
+}
+
+#fomoSlider::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
 }

@@ -109,8 +109,12 @@
                     <div class="cat-options">
                         <button class="catBtn active" data-filter="all">All</button>
                         <button class="catBtn" data-filter="tech">Tech</button>
-                        <button class="catBtn" data-filter="cultural">Cultural</button>
-                        <button class="catBtn" data-filter="sports">Sports</button>
+                        <button class="catBtn" data-filter="music">Music</button>
+                        <button class="catBtn" data-filter="dance">Dance</button>
+                        <button class="catBtn" data-filter="drama">Drama</button>
+                        <button class="catBtn" data-filter="games">Games</button>
+                        <button class="catBtn" data-filter="fusion">Fusion</button>
+                        <button class="catBtn" data-filter="iempact">IEMPACT</button>
                     </div>
                 </div>
 
@@ -132,7 +136,7 @@
                 </div>
 
                 <div class="sidebarFooter">
-                    <button id="clearAllFilters" class="clearBtn">Clear Filters</button>
+                    <button id="clearFiltersBtn" class="clearBtn">Clear Filters</button>
                     <button id="applyFiltersBtn" class="applyBtn mobile-only">Show Results</button>
                 </div>
             </aside>
@@ -172,6 +176,14 @@
             &copy; 2025 CampusPulse. | Eclipse Team
         </div>
     </footer>
+
+    <div id="eventModalOverlay" class="modal-overlay">
+        <div class="modal-content" id="modalCard">
+            <button id="closeModalBtn" class="close-btn">&times;</button>
+            <div id="modalBody">
+            </div>
+        </div>
+    </div>
 
     <script type="module" src="./src/scripts/app.js"></script>
 </body>
