@@ -55,6 +55,7 @@ async function fetchEvents() {
 async function initApp() {
     // 1. Setup Global UI Listeners (Mobile Nav & Modal)
     setupMobileNav();
+    setupMobileFilters();
     setupModalListeners();
 
     // 2. Load Memory Lane Slider (Home Page)
@@ -408,6 +409,31 @@ function setupMobileNav() {
     if (overlay) {
         overlay.addEventListener('click', toggleMenu);
     }
+}
+
+function setupMobileFilters() {
+    const openBtn = document.getElementById('openFiltersBtn');
+    const closeBtn = document.getElementById('closeSidebarBtn');
+    const sidebar = document.getElementById('filterSidebar');
+    const overlay = document.getElementById('filterOverlay');
+    const applyBtn = document.getElementById('applyFiltersBtn');
+
+    function openFilters() {
+        if (sidebar) sidebar.classList.add('open');
+        if (overlay) overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeFilters() {
+        if (sidebar) sidebar.classList.remove('open');
+        if (overlay) overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openFilters);
+    if (closeBtn) closeBtn.addEventListener('click', closeFilters);
+    if (overlay) overlay.addEventListener('click', closeFilters);
+    if (applyBtn) applyBtn.addEventListener('click', closeFilters);
 }
 // Add this at the very end of main.js
 window.openEventModal = openEventModal;
