@@ -2094,8 +2094,85 @@ body.no-scroll {
     }
 }
 
+.socialLinks a {
+    text-decoration: none; /* Removes the ugly underscores */
+    display: inline-flex;  /* Helps with alignment */
+    align-items: center;   /* Centers the icon vertically */
+}
+
+
 
 /* TEAM GRID OPTIMIZATION (2 Members) */
-#teamGrid { display: flex !important; justify-content: center !important; max-width: 950px !important; margin: 0 auto !important; flex-wrap: wrap !important; gap: 50px !important; }
-.teamCard { max-width: 400px !important; flex: 1 1 350px !important; }
-@media (max-width: 768px) { #teamGrid { flex-direction: column; align-items: center; } .teamCard { max-width: 100% !important; } }
+#teamGrid {
+    display: flex !important;
+    justify-content: center !important;
+    max-width: 100% !important;  /* CHANGED: 950px was too small, use full width */
+    margin: 0 auto !important;
+    flex-wrap: nowrap !important; /* CHANGED: Forces them to stay on one line */
+    gap: 20px !important;        /* CHANGED: Reduced gap to make them fit better */
+}
+
+.teamCard {
+    max-width: 350px !important;
+    /* CHANGED: '1 1 0px' allows them to shrink equally to fit the screen */
+    flex: 1 1 0px !important; 
+    min-width: 200px !important; /* Ensures they don't get impossibly thin */
+}
+
+/* TABLET VIEW: If screen is smaller than 1200px, wrap to 2 lines (optional) */
+@media (max-width: 1200px) {
+    #teamGrid {
+        flex-wrap: wrap !important;
+    }
+    .teamCard {
+        flex: 1 1 40% !important; /* 2 cards per row */
+    }
+}
+
+/* MOBILE VIEW: Stack vertically */
+@media (max-width: 768px) {
+    #teamGrid {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .teamCard {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+/* 1. The Main Heading Style */
+.team-title {
+    text-align: center;
+    font-size: 3rem;       /* Make it Big */
+    font-weight: 800;      /* Make it Bold */
+    color: #ffffff;        /* White text for the normal words */
+    text-transform: uppercase;
+    letter-spacing: 3px;   /* Wide spacing looks expensive */
+    margin-bottom: 50px;   /* Push the cards down */
+    font-family: 'Poppins', sans-serif; /* Or your chosen font */
+}
+
+/* 2. The "ECLIPSE" Special Effect */
+.eclipse-name {
+    /* The Magic: A burning orange/gold gradient */
+    background: linear-gradient(135deg, #ff8c00, #ff2d55);
+    -webkit-background-clip: text; /* Clips the background to the text shape */
+    -webkit-text-fill-color: transparent; /* Makes the text see-through so gradient shows */
+    
+    /* The Glow: Adds a "halo" around the text */
+    filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.6));
+    
+    position: relative;
+    display: inline-block;
+}
+
+/* Optional: A subtle animation to make it "breathe" */
+@keyframes eclipsePulse {
+    0% { filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.6)); }
+    50% { filter: drop-shadow(0 0 25px rgba(255, 60, 0, 0.9)); }
+    100% { filter: drop-shadow(0 0 15px rgba(255, 140, 0, 0.6)); }
+}
+
+.eclipse-name {
+    animation: eclipsePulse 3s infinite ease-in-out;
+}
