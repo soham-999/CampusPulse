@@ -349,5 +349,20 @@
     "venue": "CII Auditorium, Management House",
     "link": "https://docs.google.com/document/d/109iThTQoGKSFghhmJ0Lw-hv_qsQiDdMT/edit",
     "pastGallery": []
+  },
+  
+  {
+    "id": 28,
+    "title": "IEM Cricket League S-1",
+    "date": "2026-03-10T09:00:00",
+    "category": "Sports",
+    "type": "League Registration",
+    "organizer": "IEM Sports Committee",
+    "image": "./assets/images/cricketrep.png",
+    "description": "REPRESENTATIVE REGISTRATION FORM OPEN! 🏏✨\n\nIt's time to run the show! The IEM Cricket League S-1 is officially on, and we're looking for fierce, passionate, and strategic female leaders to step up as Team Representatives!\n\n🔹 ROLE:\nManage and motivate your squad to victory. Build a champion team from the ground up.\n\n🔥🔥 LIMITED SLOTS ONLY!!! 🔥🔥\n\nNote: Venue and specific match dates will be announced soon.",
+    "venue": "To Be Announced",
+    "link": "http://docs.google.com/forms/d/e/1FAIpQLSemhihOVwGVVLtkksA-0HEnfnYOQPbyRnSWN9PC-XcR4EqDUg/viewform",
+    "pastGallery": []
   }
+
 ]
